@@ -18,8 +18,8 @@ module.exports = class Sheet {
     await this.doc.loadInfo();
   }
 
-  async addRows(rows, index) {
-    const sheet = this.doc.sheetsByIndex[index];
+  async add(rows) {
+    const sheet = this.doc.sheetsByIndex[0];
     await sheet.addRows(rows);
   }
 };
